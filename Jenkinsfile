@@ -13,6 +13,11 @@ stage('Get approval'){
 }
 node {
     stage('deploy to qa'){
-        echo "deploying"
+        echo "deploying QA environment"
+    }
+}
+node {
+    stage('deploy to prod'){
+        echo "deploying to production"
     }
 }
