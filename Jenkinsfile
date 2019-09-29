@@ -16,6 +16,9 @@ node {
         echo "deploying QA environment"
     }
 }
+stage('Get approval'){
+    input "Deploy to Prod?"
+}
 node {
     stage('deploy to prod'){
         echo "deploying to production"
